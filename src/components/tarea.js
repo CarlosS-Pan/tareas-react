@@ -14,7 +14,7 @@ const Tarea = ({tarea, onDelete, idx, onUpdate}) => {
 
     return (
         <div className="container">
-            <h5>{tarea.name}</h5>
+            <h5>{tarea.nombre}</h5>
             <h5>{`Id mongo: ${tarea._id}`}</h5>
             <h5>{`Id: ${tarea.id}`}</h5>
             <h5>{`Materia: ${tarea.materia}`}</h5>

@@ -14,7 +14,7 @@ const TareasForm = ({onClickFn}) => {
         else {
             let data = {
                 id: id,
-                name: nombre,
+                nombre: nombre,
                 materia: materia,
                 puntos: puntos,
                 fechaEntrega: fechaEntrega

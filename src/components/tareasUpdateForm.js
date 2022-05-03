@@ -3,11 +3,12 @@ import {useState} from "react";
 
 const TareasFormUpdate = ({onClickFnUpdate, oldTarea}) => {
     const [id, setID] = useState(oldTarea.id);
-    const [nombre, setNombre] = useState(oldTarea.name);
+    const [nombre, setNombre] = useState(oldTarea.nombre);
     const [materia, setMateria] = useState(oldTarea.materia);
     const [puntos, setPuntos] = useState(oldTarea.puntos);
     const [fechaEntrega, setFechaEntrega] = useState(oldTarea.fechaEntrega);
 
+    // 
     const onEnviar = (event) => {
         event.preventDefault();
         if (id === "" || nombre === "" || materia === "" || puntos === "" || fechaEntrega === "") alert("No puede dejar ningún campo vacío");
