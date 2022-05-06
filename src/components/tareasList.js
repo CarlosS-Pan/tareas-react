@@ -8,14 +8,14 @@ const TareasList = () => {
     const [showForm, setShowForm] = useState(false);
 
     useEffect(() => {
-        fetch("http://localhost:3001/tareas")
+        fetch("https://tareas-api5.azurewebsites.net/tareas")
             .then((res) => res.json())
             .then((data) => setTareas(data.data))
             .catch((err) => console.log(`Error: ${err}`));
     }, []);
 
     const getTareas = () => {
-        fetch("http://localhost:3001/tareas")
+        fetch("https://tareas-api5.azurewebsites.net/tareas")
             .then((res) => res.json())
             .then((data) => setTareas(data.data))
             .catch((err) => console.log(`Error: ${err}`));
@@ -23,7 +23,7 @@ const TareasList = () => {
 
     const createTarea = (data) => {
         try {
-            fetch("http://localhost:3001/tareas", {
+            fetch("https://tareas-api5.azurewebsites.net/tareas", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ const TareasList = () => {
 
     const updateTarea = (tarea) => {
         try {
-            fetch(`http://localhost:3001/tareas/${tarea._id}`, {
+            fetch(`https://tareas-api5.azurewebsites.net/tareas/${tarea._id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ const TareasList = () => {
 
     const deleteTarea = async (idx) => {
         try {
-            fetch(`http://localhost:3001/tareas/${idx}`, {
+            fetch(`https://tareas-api5.azurewebsites.net/tareas/${idx}`, {
                 method: 'DELETE',
             }).then(response => response.json())
                 .then(() => {
